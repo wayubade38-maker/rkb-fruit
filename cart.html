@@ -242,7 +242,7 @@
       // Обработчик кнопки оплаты
       document.getElementById('checkout-btn').onclick = async () => {
         try {
-          const response = await fetch('/.netlify/functions/createcheckout', {
+          const response = await fetch('/.netlify/functions/create_checkout', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(cart)
