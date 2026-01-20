@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RKB FRUIT & VEG LTD – Fresh & Exotic Fruits</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #fff; color: #333; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: #2e7d32; color: white; padding: 20px 0; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+    nav a { color: #2e7d32; text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 4px; }
+    nav a:hover { background: #e8f5e9; }
+    .hero { text-align: center; padding: 60px 0; background: #f1f8e9; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; color: #1b5e20; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 20px; color: #555; }
+
+    .section { margin: 60px 0; }
+    .section h2 { text-align: center; margin-bottom: 30px; color: #1b5e20; font-size: 2rem; }
+
+    /* Преимущества с фото */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .feature-left { order: 1; }
+    .feature-right { order: 2; }
+    @media (max-width: 767px) {
+      .feature-left, .feature-right { order: unset; }
+    }
+    .feature-img {
+      flex: 1; min-width: 300px;
+    }
+    .feature-img img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .feature-text {
+      flex: 1; min-width: 300px;
+    }
+    .feature-text h2 {
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+
+    /* Поставщики */
+    .suppliers {
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .suppliers { grid-template-columns: repeat(3, 1fr); }
+    }
+    .supplier-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .supplier-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* Отзывы с каруселью */
+    .reviews-container {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    #reviewCarousel {
+      display: flex;
+      overflow: hidden;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #fff;
+      justify-content: center;
+    }
+    .review-card {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+    .review-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .review-card h3 {
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #2e7d32;
+      color: white;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    #prevBtn { left: -45px; }
+    #nextBtn { right: -45px; }
+
+    /* How to Order */
+    .how-to-order .features {
+      display: grid;
+      gap: 25px;
+      margin: 0;
+    }
+    @media (min-width: 768px) {
+      .how-to-order .features { grid-template-columns: repeat(3, 1fr); }
+    }
+    .feature-card {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 12px;
+      background: #f9f9f9;
+    }
+    .feature-card i {
+      margin-bottom: 15px;
+    }
+    .feature-card h3 {
+      color: #2e7d32;
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav a { 
+      color: #555; 
+      text-decoration: none; 
+      font-size: 0.95rem; 
+    }
+    .footer-social { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-bottom: 20px; 
+    }
+    .footer-social a { 
+      color: #E1306C; 
+      font-size: 24px; 
+    }
+    .footer-social a[href*="facebook"] { color: #1877F2; }
+    .footer-social a[href*="twitter"] { color: #1DA1F2; }
+    .footer-legal { 
+      text-align: center; 
+      color: #777; 
+      font-size: 0.9rem; 
+      margin-bottom: 15px; 
+    }
+    .footer-legal a { 
+      color: #777; 
+      text-decoration: none; 
+      margin: 0 8px; 
+    }
+    .footer-copyright { 
+      text-align: center; 
+      color: #999; 
+      font-size: 0.9rem; 
+    }
+    .btn {
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+    .btn:hover { background: #1b5e20; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>RKB FRUIT & VEG LTD</h1>
+    </div>
+  </header>
+
+  <nav class="container">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="contact.html">Contact</a>
+    <a href="wholesale.html">Wholesale</a> <!-- ← НОВАЯ ССЫЛКА -->
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Fresh & Exotic Fruits Delivered Across the UK</h1>
+      <p>We source the finest tropical fruits, dried delicacies, premium nuts, and rare canned fruits — directly from ethical farms to your doorstep.</p>
+      <a href="products.html" class="btn">Browse Our Shop</a>
+    </div>
+  </div>
+
+  <!-- Преимущества -->
+  <div class="section">
+    <div class="container">
+
+      <div class="features">
+        <div class="feature-img">
+          <img src="delivery-photo.png" alt="Free UK Delivery">
+        </div>
+        <div class="feature-text">
+          <h2>🚚 Free UK Delivery</h2>
+          <p>On all orders over £30. Fast, eco-friendly shipping to your door.</p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature-img feature-right">
+          <img src="quality-photo.png" alt="Premium Quality">
+        </div>
+        <div class="feature-text feature-left">
+          <h2>🌟 Premium Quality</h2>
+          <p>Hand-picked at peak ripeness. No preservatives, no compromises.</p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature-img">
+          <img src="ethical-photo.png" alt="Ethically Sourced">
+        </div>
+        <div class="feature-text">
+          <h2>🌍 Ethically Sourced</h2>
+          <p>Direct partnerships with small farms who care for people and planet.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Поставщики -->
+  <div class="section">
+    <div class="container">
+      <h2>Our Trusted Suppliers</h2>
+      <div class="suppliers">
+        <div class="supplier-card">
+          <img src="thailand-farm.png" alt="Thailand Farms">
+          <h3>Thailand Farms</h3>
+          <p>Mangoes, Dragon Fruit</p>
+        </div>
+        <div class="supplier-card">
+          <img src="costa-rica-farm.png" alt="Costa Rica Cooperative">
+          <h3>Costa Rica Co-op</h3>
+          <p>Pineapple, Papaya</p>
+        </div>
+        <div class="supplier-card">
+          <img src="vietnam-farm.png" alt="Vietnam Growers">
+          <h3>Vietnam Growers</h3>
+          <p>Rambutan, Lychee</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Отзывы -->
+  <div class="section">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      
+      <div class="reviews-container">
+        <div id="reviewCarousel"></div>
+        <button id="prevBtn" class="carousel-btn">&lt;</button>
+        <button id="nextBtn" class="carousel-btn">&gt;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- How to Order -->
+  <div class="section how-to-order">
+    <div class="container">
+      <h2>How to Order in 3 Easy Steps</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-search"></i>
+          <h3>1. Choose Your Favourite</h3>
+          <p>Browse our fresh, dried, or canned fruits and pick what you love.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>2. Click “Order Now”</h3>
+          <p>Press the green button — you’ll go to Stripe, the world’s most trusted payment platform.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>3. Enter Your Details</h3>
+          <p>Fill in your email and card info. All data is encrypted — we never see your card.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 30px; background: #f1f8e9; padding: 20px; border-radius: 12px;">
+        <p><strong>🚚 Fast UK Delivery:</strong> Orders placed by Wednesday arrive fresh by Friday–Saturday!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="contact.html">Contact</a>
+        <a href="wholesale.html">Wholesale</a> <!-- ← НОВАЯ ССЫЛКА -->
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/yourhandle" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="returns.html">Returns & Refunds</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 RKB FRUIT & VEG LTD. All rights reserved.<br>
+        Registered in England and Wales. Company No: 12568638<br>
+        27 Balfour Business Centre, Balfour Road, Southall, UB2 5BD
+      </div>
+    </div>
+  </footer>
+
+  <!-- Карусель отзывов -->
+  <script>
+    const reviews = [
+      {
+        img: 'review-sarah.png',
+        name: 'Sarah J., London',
+        text: '“The freshest dragon fruit I’ve ever had! Arrived perfectly ripe and beautifully packed.”'
+      },
+      {
+        img: 'review-mark.png',
+        name: 'Mark T., Manchester',
+        text: '“My kids love the dried mango. No sugar added — finally a healthy snack they enjoy!”'
+      },
+      {
+        img: 'review-emily.png',
+        name: 'Emily R., Bristol',
+        text: '“I order the fresh fruit box every week. It’s become a family ritual — and my kids eat more fruit now!”'
+      },
+      {
+        img: 'review-david.png',
+        name: 'David L., Edinburgh',
+        text: '“At 72, I appreciate food that’s both tasty and healthy. Your nuts and dried fruits are perfect.”'
+      },
+      {
+        img: 'review-chloe.png',
+        name: 'Chloe W., Brighton',
+        text: '“My go-to for smoothie bowls! The passion fruit and lychee are incredible. Fast delivery too!”'
+      },
+      {
+        img: 'review-james.png',
+        name: 'James K., Leeds',
+        text: '“As a chef, I’m picky about ingredients. Your produce is consistently excellent. Highly recommend!”'
+      }
+    ];
+
+    let currentIndex = 0;
+    const carousel = document.getElementById('reviewCarousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function showReviews() {
+      const isMobile = window.innerWidth < 768;
+      const itemsToShow = isMobile ? 1 : 2;
+      carousel.innerHTML = '';
+
+      for (let i = 0; i < itemsToShow; i++) {
+        const reviewIndex = (currentIndex + i) % reviews.length;
+        const review = reviews[reviewIndex];
+        
+        const reviewEl = document.createElement('div');
+        reviewEl.className = 'review-card';
+        reviewEl.innerHTML = `
+          <img src="${review.img}" alt="${review.name}">
+          <h3>${review.name}</h3>
+          <p style="font-style: italic;">${review.text}</p>
+        `;
+        carousel.appendChild(reviewEl);
+      }
+    }
+
+    function nextReviews() {
+      const isMobile = window.innerWidth < 768;
+      const step = isMobile ? 1 : 2;
+      currentIndex = (currentIndex + step) % reviews.length;
+      showReviews();
+    }
+
+    function prevReviews() {
+      const isMobile = window.innerWidth < 768;
+      const step = isMobile ? 1 : 2;
+      currentIndex = (currentIndex - step + reviews.length) % reviews.length;
+      showReviews();
+    }
+
+    showReviews();
+    nextBtn.addEventListener('click', nextReviews);
+    prevBtn.addEventListener('click', prevReviews);
+    window.addEventListener('resize', showReviews);
+  </script>
+
+</body>
+</html>

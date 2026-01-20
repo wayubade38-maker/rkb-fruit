@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – RKB FRUIT & VEG LTD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #fff; color: #333; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: #2e7d32; color: white; padding: 20px 0; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+    nav a { color: #2e7d32; text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 4px; }
+    nav a:hover { background: #e8f5e9; }
+    .hero { text-align: center; padding: 40px 0; background: #f1f8e9; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 20px; color: #1b5e20; }
+
+    .section {
+      margin: 40px 0;
+    }
+    .section h2 {
+      color: #1b5e20;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    /* Фото склада */
+    .facilities-grid {
+      display: grid;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    @media (min-width: 768px) {
+      .facilities-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .facility-item {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .facility-item:hover { transform: translateY(-5px); }
+    .facility-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .facility-item-content {
+      padding: 15px;
+      text-align: center;
+    }
+    .facility-item h3 {
+      color: #1b5e20;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+    .facility-item p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    /* Развитие */
+    .growth {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .growth i {
+      font-size: 2.5rem;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+    .growth h3 {
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+    .growth p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav a { 
+      color: #555; 
+      text-decoration: none; 
+      font-size: 0.95rem; 
+    }
+    .footer-social { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-bottom: 20px; 
+    }
+    .footer-social a { 
+      color: #E1306C; 
+      font-size: 24px; 
+    }
+    .footer-social a[href*="facebook"] { color: #1877F2; }
+    .footer-social a[href*="twitter"] { color: #1DA1F2; }
+    .footer-legal { 
+      text-align: center; 
+      color: #777; 
+      font-size: 0.9rem; 
+      margin-bottom: 15px; 
+    }
+    .footer-legal a { 
+      color: #777; 
+      text-decoration: none; 
+      margin: 0 8px; 
+    }
+    .footer-copyright { 
+      text-align: center; 
+      color: #999; 
+      font-size: 0.9rem; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>RKB FRUIT & VEG LTD</h1>
+    </div>
+  </header>
+
+  <nav class="container">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="contact.html">Contact</a>
+<a href="wholesale.html">Wholesale</a> <!-- ← НОВАЯ ССЫЛКА -->
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Founded in 2020, we’re passionate about bringing the vibrant flavours of the tropics to your kitchen — with integrity, sustainability, and freshness at our core.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="content">
+        <h2>Our Mission</h2>
+        <p>We believe that everyone deserves access to nature’s finest produce — harvested at peak ripeness, ethically sourced, and delivered with care.</p>
+        <p>Our mission is simple: bring the vibrant flavours of the tropics to your kitchen, without compromise on quality, sustainability, or freshness.</p>
+
+        <h2>Our Values</h2>
+        <p>🌱 <strong>Ethical Sourcing</strong> — We partner directly with small farms in Thailand, Costa Rica, Vietnam, and Ghana to ensure fair pay and sustainable practices.</p>
+        <p>📦 <strong>Zero Waste</strong> — We use recyclable and compostable packaging wherever possible.</p>
+        <p>🇬🇧 <strong>UK-Based</strong> — All orders are packed and dispatched from our facility in Southall, London.</p>
+        <p>Our company is registered in England and Wales (No: 12568638) and operates under full compliance with UK food safety and trading standards.</p>
+      </div>
+    </div>
+
+    <!-- Новый раздел: Склад и оборудование -->
+    <div class="section">
+      <h2>🏭 Our Facility: Where Freshness Meets Precision</h2>
+
+      <!-- Раздел 1: Packaging with Care -->
+      <h3 style="color: #1b5e20; text-align: center; margin: 30px 0 15px;">📦 Packaging with Care</h3>
+      <div class="facilities-grid">
+        <div class="facility-item">
+          <img src="warehouse-packaging-1.jpg" alt="Staff packing fruit boxes">
+          <div class="facility-item-content">
+            <h3>Packing Team</h3>
+            <p>Our skilled team hand-packs every order with care.</p>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="warehouse-packaging-2.jpg" alt="Temperature-controlled storage">
+          <div class="facility-item-content">
+            <h3>Cool Storage</h3>
+            <p>Temperature-controlled rooms keep produce fresh until dispatch.</p>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="warehouse-packaging-3.jpg" alt="Recyclable packaging materials">
+          <div class="facility-item-content">
+            <h3>Eco Materials</h3>
+            <p>We use recyclable, plastic-free packaging for every order.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Раздел 2: On the Latest Technology -->
+      <h3 style="color: #1b5e20; text-align: center; margin: 40px 0 15px;">🛠️ On the Latest Technology</h3>
+      <div class="facilities-grid">
+        <div class="facility-item">
+          <img src="modern-equipment-1.jpg" alt="Automated weighing machine">
+          <div class="facility-item-content">
+            <h3>Precision Weighing</h3>
+            <p>Every item is weighed to the gram using automated scales.</p>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="modern-equipment-2.jpg" alt="Quality control station">
+          <div class="facility-item-content">
+            <h3>Quality Control</h3>
+            <p>Each batch is inspected for ripeness, colour, and damage.</p>
+          </div>
+        </div>
+        <div class="facility-item">
+          <img src="modern-equipment-3.jpg" alt="Barcode scanning system">
+          <div class="facility-item-content">
+            <h3>Barcode Tracking</h3>
+            <p>Every order is tracked from pack to delivery for full transparency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Новый раздел: Развитие -->
+    <div class="section">
+      <div class="growth">
+        <i class="fas fa-rocket"></i>
+        <h3>We’re Growing — And So Is Our Range!</h3>
+        <p>We’re constantly expanding our product range to meet your needs. In the coming months, we’ll be launching:</p>
+        <p><strong>❄️ Flash-Frozen Tropical Fruits</strong> — picked at peak ripeness and frozen within hours to lock in nutrients and flavour.</p>
+        <p>Stay tuned — more exciting products are on the way!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="contact.html">Contact</a>
+        <a href="wholesale.html">Wholesale</a> <!-- ← НОВАЯ ССЫЛКА -->
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/yourhandle" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="returns.html">Returns & Refunds</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 RKB FRUIT & VEG LTD. All rights reserved.<br>
+        Registered in England and Wales. Company No: 12568638<br>
+        27 Balfour Business Centre, Balfour Road, Southall, UB2 5BD
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

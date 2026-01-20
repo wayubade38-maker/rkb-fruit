@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Nuts – RKB FRUIT & VEG LTD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #fff; color: #333; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { 
+      background: #2e7d32; 
+      color: white; 
+      padding: 20px 0; 
+      text-align: center; 
+      position: relative;
+    }
+    header .container {
+      position: relative;
+    }
+    nav { display: flex; justify-content: center; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+    nav a { color: #2e7d32; text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 4px; }
+    nav a:hover { background: #e8f5e9; }
+    .hero { text-align: center; padding: 40px 0; background: #f1f8e9; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 20px; color: #1b5e20; }
+
+    .products {
+      display: grid;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    @media (min-width: 768px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      .product-card img {
+        height: 350px;
+      }
+    }
+    .product-card-content {
+      padding: 20px;
+    }
+    .product-card h2 {
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    /* Кнопка с ценой */
+    .add-to-cart-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      display: inline-block;
+      margin-top: 15px;
+      width: 100%;
+      text-align: center;
+    }
+    .add-to-cart-btn:hover {
+      background-color: #45a049;
+    }
+    .add-to-cart-btn:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav a { 
+      color: #555; 
+      text-decoration: none; 
+      font-size: 0.95rem; 
+    }
+    .footer-social { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-bottom: 20px; 
+    }
+    .footer-social a { 
+      color: #E1306C; 
+      font-size: 24px; 
+    }
+    .footer-social a[href*="facebook"] { color: #1877F2; }
+    .footer-social a[href*="twitter"] { color: #1DA1F2; }
+    .footer-legal { 
+      text-align: center; 
+      color: #777; 
+      font-size: 0.9rem; 
+      margin-bottom: 15px; 
+    }
+    .footer-legal a { 
+      color: #777; 
+      text-decoration: none; 
+      margin: 0 8px; 
+    }
+    .footer-copyright { 
+      text-align: center; 
+      color: #999; 
+      font-size: 0.9rem; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>RKB FRUIT & VEG LTD</h1>
+      <div style="position: absolute; top: 20px; right: 20px;">
+        <a href="cart.html" id="cart-icon" style="color: white; font-size: 24px; text-decoration: none;">
+          🛒 <span id="cart-count"></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="container">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Premium Nuts</h1>
+      <p>Ethically sourced, lightly roasted for maximum crunch and flavour.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="products">
+
+      <!-- 1 -->
+      <div class="product-card">
+        <img src="nuts-cashew-macadamia.jpg" alt="Cashew & Macadamia Mix">
+        <div class="product-card-content">
+          <h2>Cashew & Macadamia Mix</h2>
+          <p><strong>200g resealable pouch</strong></p>
+          <p>Buttery macadamias and creamy cashews — rich in healthy fats and protein.<br>
+          <em>Vegan • Gluten-free • Lightly roasted</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_7KkLlMmNnOoPpQqRrSsTtUuVv', 'Cashew & Macadamia Mix', 499)">
+            £4.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card">
+        <img src="nuts-pistachio-brazil.jpg" alt="Pistachio & Brazil Nut Mix">
+        <div class="product-card-content">
+          <h2>Pistachio & Brazil Nut Mix</h2>
+          <p><strong>220g eco-friendly bag</strong></p>
+          <p>Vibrant pistachios and selenium-rich Brazil nuts — a powerhouse snack.<br>
+          <em>Vegan • Gluten-free • No salt added</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_8LlMmNnOoPpQqRrSsTtUuVvWw', 'Pistachio & Brazil Nut Mix', 799)">
+            £7.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <img src="nuts-almond-walnut.jpg" alt="Almond & Walnut Blend">
+        <div class="product-card-content">
+          <h2>Almond & Walnut Blend</h2>
+          <p><strong>200g kraft paper bag</strong></p>
+          <p>Crunchy almonds and earthy walnuts — perfect for baking or snacking.<br>
+          <em>Vegan • Gluten-free • Raw & unsalted</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_9MmNnOoPpQqRrSsTtUuVvWwXx', 'Almond & Walnut Blend', 499)">
+            £4.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <img src="nuts-premium-selection.jpg" alt="Premium Nut Selection">
+        <div class="product-card-content">
+          <h2>Premium Nut Selection</h2>
+          <p><strong>400g luxury gift box</strong></p>
+          <p>Our finest nuts in one elegant gift box — ideal for health-conscious foodies.<br>
+          <em>Vegan • Gluten-free • Hand-packed in the UK</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_0NnOoPpQqRrSsTtUuVvWwXxYy', 'Premium Nut Selection', 1799)">
+            £17.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <img src="nuts-peanut-cashew.jpg" alt="Peanut & Cashew Crunch">
+        <div class="product-card-content">
+          <h2>Peanut & Cashew Crunch</h2>
+          <p><strong>250g resealable pouch</strong></p>
+          <p>Classic peanuts meet creamy cashews — lightly roasted for everyday snacking.<br>
+          <em>Vegan • Gluten-free • High in protein</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_1OoPpQqRrSsTtUuVvWwXxYyZz', 'Peanut & Cashew Crunch', 499)">
+            £4.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <img src="nuts-hazelnut-almond.jpg" alt="Hazelnut & Almond Duo">
+        <div class="product-card-content">
+          <h2>Hazelnut & Almond Duo</h2>
+          <p><strong>180g glass jar</strong></p>
+          <p>Rich hazelnuts and crisp almonds — perfect for homemade nut butter or desserts.<br>
+          <em>Vegan • Gluten-free • Plastic-free packaging</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_2PpQqRrSsTtUuVvWwXxYyZzAa', 'Hazelnut & Almond Duo', 799)">
+            £7.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="product-card">
+        <img src="nuts-mixed-nuts.jpg" alt="Classic Mixed Nuts">
+        <div class="product-card-content">
+          <h2>Classic Mixed Nuts</h2>
+          <p><strong>300g resealable pouch</strong></p>
+          <p>A balanced blend of almonds, cashews, walnuts, and Brazil nuts — no peanuts.<br>
+          <em>Vegan • Gluten-free • Unsalted</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_3QqRrSsTtUuVvWwXxYyZzAaBb', 'Classic Mixed Nuts', 649)">
+            £6.49 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="product-card">
+        <img src="nuts-pistachio-only.jpg" alt="Single-Origin Pistachios">
+        <div class="product-card-content">
+          <h2>Single-Origin Pistachios</h2>
+          <p><strong>150g premium pouch</strong></p>
+          <p>Vibrant green pistachios from Turkey — shelled, unsalted, and full of flavour.<br>
+          <em>Vegan • Gluten-free • Rich in antioxidants</em></p>
+          <button class="add-to-cart-btn" onclick="addToCart('price_4RrSsTtUuVvWwXxYyZzAaBbCc', 'Single-Origin Pistachios', 999)">
+            £9.99 – Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="contact.html">Contact</a>
+        <a href="wholesale.html">Wholesale</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/yourhandle" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="returns.html">Returns & Refunds</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 RKB FRUIT & VEG LTD. All rights reserved.<br>
+        Registered in England and Wales. Company No: 12568638<br>
+        27 Balfour Business Centre, Balfour Road, Southall, UB2 5BD
+      </div>
+    </div>
+  </footer>
+
+  <!-- Корзина с обновлением иконки -->
+  <script>
+    function addToCart(priceId, name, priceCents) {
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const existingItem = cart.find(item => item.priceId === priceId);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ priceId, name, priceCents, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart!`);
+    }
+
+    function updateCartIcon() {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const countEl = document.getElementById('cart-count');
+      if (countEl) {
+        countEl.textContent = totalItems > 0 ? totalItems : '';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCartIcon);
+
+    const originalAddToCart = window.addToCart;
+    window.addToCart = function(priceId, name, priceCents) {
+      originalAddToCart(priceId, name, priceCents);
+      updateCartIcon();
+    };
+  </script>
+
+</body>
+</html>

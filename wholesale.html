@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wholesale – RKB FRUIT & VEG LTD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #fff; color: #333; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: #2e7d32; color: white; padding: 20px 0; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 20px; margin: 20px 0; flex-wrap: wrap; }
+    nav a { color: #2e7d32; text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 4px; }
+    nav a:hover { background: #e8f5e9; }
+    .hero { text-align: center; padding: 40px 0; background: #f1f8e9; margin-bottom: 40px; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 20px; color: #1b5e20; }
+
+    .section {
+      margin: 40px 0;
+    }
+    .section h2 {
+      color: #1b5e20;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .wholesale-cards {
+      display: grid;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    @media (min-width: 768px) {
+      .wholesale-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    .wholesale-card {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .wholesale-card:hover { transform: translateY(-5px); }
+    .wholesale-card i {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2e7d32;
+    }
+    .wholesale-card h3 {
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+    .wholesale-card p {
+      color: #555;
+    }
+
+    .requirements {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .requirements h3 {
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+    .requirements p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .requirements strong {
+      color: #2e7d32;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 40px 0 20px;
+      margin-top: 60px;
+      border-top: 1px solid #eee;
+    }
+    .footer-nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      flex-wrap: wrap; 
+      margin-bottom: 20px; 
+    }
+    .footer-nav a { 
+      color: #555; 
+      text-decoration: none; 
+      font-size: 0.95rem; 
+    }
+    .footer-social { 
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-bottom: 20px; 
+    }
+    .footer-social a { 
+      color: #E1306C; 
+      font-size: 24px; 
+    }
+    .footer-social a[href*="facebook"] { color: #1877F2; }
+    .footer-social a[href*="twitter"] { color: #1DA1F2; }
+    .footer-legal { 
+      text-align: center; 
+      color: #777; 
+      font-size: 0.9rem; 
+      margin-bottom: 15px; 
+    }
+    .footer-legal a { 
+      color: #777; 
+      text-decoration: none; 
+      margin: 0 8px; 
+    }
+    .footer-copyright { 
+      text-align: center; 
+      color: #999; 
+      font-size: 0.9rem; 
+    }
+    .btn {
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>RKB FRUIT & VEG LTD</h1>
+    </div>
+  </header>
+
+  <nav class="container">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="contact.html">Contact</a>
+    <a href="wholesale.html">Wholesale</a>
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Wholesale Inquiries</h1>
+      <p>Direct from farms to your business — premium exotic fruits, nuts, and dried goods at competitive wholesale prices.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Why Partner With Us?</h2>
+      <div class="wholesale-cards">
+        <div class="wholesale-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Direct from Farms</h3>
+          <p>We work directly with small farms in Thailand, Costa Rica, Vietnam, and Ghana — cutting out middlemen for better quality and pricing.</p>
+        </div>
+        <div class="wholesale-card">
+          <i class="fas fa-truck-loading"></i>
+          <h3>Consistent Supply</h3>
+          <p>Reliable weekly shipments of fresh, dried, and canned tropical produce — tailored to your business needs.</p>
+        </div>
+        <div class="wholesale-card">
+          <i class="fas fa-seedling"></i>
+          <h3>Premium Quality</h3>
+          <p>Only peak-ripeness fruits, no preservatives, full traceability from farm to your warehouse.</p>
+        </div>
+        <div class="wholesale-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Flexible Terms</h3>
+          <p>Custom packaging, volume discounts, and dedicated account support for long-term partners.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="requirements">
+        <h3>📋 Wholesale Requirements</h3>
+        <p><strong>Minimum order value: £5,000</strong></p>
+        <p>All inquiries are handled exclusively via email to ensure personalised service.</p>
+        <p>We serve:</p>
+        <ul style="display: inline-block; text-align: left; margin-top: 10px;">
+          <li>• Restaurants & Hotels</li>
+          <li>• Supermarkets & Delis</li>
+          <li>• Catering Companies</li>
+          <li>• Health Food Brands</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" style="text-align: center;">
+      <h2>📧 Get in Touch</h2>
+      <p>To discuss partnership opportunities, please email us with:</p>
+      <ul style="max-width: 600px; margin: 20px auto; text-align: left;">
+        <li>Your company name and registration number</li>
+        <li>Business type (restaurant, retailer, etc.)</li>
+        <li>Estimated monthly order volume</li>
+        <li>Preferred product categories</li>
+      </ul>
+      <a href="mailto:office@rkbltd.co.uk" class="btn">Email Us Now</a>
+      <p style="margin-top: 15px; color: #666;">We respond to all wholesale inquiries within 1–2 business days.</p>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="contact.html">Contact</a>
+        <a href="wholesale.html">Wholesale</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://instagram.com/yourhandle" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-legal">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="returns.html">Returns & Refunds</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 RKB FRUIT & VEG LTD. All rights reserved.<br>
+        Registered in England and Wales. Company No: 12568638<br>
+        27 Balfour Business Centre, Balfour Road, Southall, UB2 5BD
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
