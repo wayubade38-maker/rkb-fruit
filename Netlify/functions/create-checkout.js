@@ -32,8 +32,8 @@ exports.handler = async (event, context) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       line_items,
-      success_url: 'https://https://rkbltd.co.uk/success.html', // ← ЗАМЕНИ НА СВОЙ URL
-      cancel_url: 'https://https://rkbltd.co.uk/success.html'       // ← ЗАМЕНИ НА СВОЙ URL
+      success_url: 'https://rkbltd.co.uk/success.html', // ← ЗАМЕНИ НА СВОЙ URL
+      cancel_url: 'https://rkbltd.co.uk/success.html'       // ← ЗАМЕНИ НА СВОЙ URL
     });
 
     // Возвращаем URL на клиент
