@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
       mode: 'payment',
       line_items,
       success_url: 'https://rkbltd.co.uk/success.html', // ← ЗАМЕНИ НА СВОЙ URL
-      cancel_url: 'https://rkbltd.co.uk/success.html'       // ← ЗАМЕНИ НА СВОЙ URL
+      cancel_url: 'https://rkbltd.co.uk/cart.html'       // ← ЗАМЕНИ НА СВОЙ URL
     });
 
     // Возвращаем URL на клиент
